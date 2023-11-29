@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //Нам дано масив друзів let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"]; Потрібно зробити перевірку якщо
+    //кількість елементів у масиві більше або дорівнює 3, то виводиться повідомлення про те, що це великий масив, в якому  3 і більше елементи.
+    //    Інакше слід вивести на екран повідомлення про те, що це маленький масив, в якому менше 3-х елементів.
+
+    let friends = [ 'Ivan','Slavik', 'Grisha','Lena', 'Ira'];
+    console.log(friends.length);
+    if (friends.length >= 3)
+    {
+        console.log('великийМасив');
+    }
+    else {
+        console.log('малийМасив')
+    };
+
+
+    // Маємо 3 числа і між ним  нам потрібно знайти те що посередині.
+     //   Знайти, яке з них є середнім (більше одного, але менше за інше). Перевірити, чи знаходиться перше число між двома іншими
+
+//let num1 = 9;
+  //  let num2 = 17;
+    //let num3 = 21;
+
+
+    //if ((num1 < num2 && num2 < num3) || (num1 <= num2 && num2<= num3))
+    //{
+
+
+      //  console.log('middleNumber');
+    //}
+    let num1 = 9;
+    let num2 = 17;
+    let num3 = 15;
+    let middleNumber;
+    if (num2 < num1 && num1 < num3){
+        middleNumber = num1;
+    }
+    else if (num1< num2 && num2< num3) {
+        middleNumber = num2;
+    }
+    else if (num1<num3 && num3<num2){
+        middleNumber = num3;
+    }
+    console.log([num1, num2, num3]);
+    console.log(middleNumber);
+
+    //- Перепишіть конструкцію if з використанням умовного оператора '?':
+   // let result;
+   // if (a + b < 4) {
+   //     result = 'Мало';
+ //   } else {
+  //      result = 'Багато';
+  //  }
+    let a = 25;
+    let b =32;
+    let result = (a + b < 4) ? 'мало': 'багато';
+    console.log(result);
+
+   // Маємо будь яке число від -100 , 0 , +100 потрібно перевірити яким є число: позитивним, негативним або нулем
+   // напишіть це тернарним оператором
+
+let number = 8;
+let sum = (number > 0) ? 'positive' :
+    (number === 0) ? 'zero' : 'negative' ;
+console.log(sum);
+   // У нас є змінна test, якщо дорівнює true, виведіть 'Вірно', інакше виведіть 'Неправильно'.
+   //     Перевірте роботу скрипта при test, що дорівнює true, false. Напишіть два варіанти скрипта - з коротким записом(тернаркою)
+let test = false;
+let check = (test) ? 'вірно': 'невірно';
+console.log(check);
+   // Використовуючи конструкцію if..else, напишіть код, який запитуватиме: „Яка «офіційна» назва JavaScript?“
+//Якщо користувач вводить «ECMAScript», то показати: «Правильно!», інакше – відобразити: «Не знаєте? ECMAScript!
+
+
+    let question= prompt ('Яка офіційна назва JavaScript');
+
+if (question === 'ECMAScript')  {
+    console.log('true');
+
+}else {
+    console.log('Не знаєте? ECMAScript!');
+
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
