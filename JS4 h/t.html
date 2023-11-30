@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS4</title>
+</head>
+<body>
+<script>
+
+
+    //створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+   function rsquare (a,b) {
+        let result = a * b;
+
+       console.log(result);
+       return result
+    }
+   rsquare(2,
+       3);
+//створити функцію яка обчислює та повертає площу кола з радіусом r
+
+
+function csquare (radius){
+
+   let result = radius * radius * Math.PI;
+    console.log(result);
+return result;
+}
+csquare(5);
+
+
+
+
+//створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+    function cylsquare ([h,r]) {
+        let result =  2 * r * h * Math.PI;
+        console.log(result);
+        return result;
+    }
+    cylsquare([2,4]);
+    //створити функцію яка приймає масив та виводить кожен його елемент
+    function showElemOfArr(arr) {
+        for (const el of arr) {
+            console.log(el);
+
+        }
+    }
+    showElemOfArr([1, 2, 3, 4, 5,]);
+
+
+  //  створити функцію яка створює параграф з текстом. Текст задати через аргумент
+    function createPWithText(hello){
+    document.write(`<p>${hello}</p>`)
+        console.log("hello")
+    }
+createPWithText('hello');
+
+    //створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+    function createUlWithLi(){
+
+        document.write('<ul>')
+        for (let i = 0; i < 3; i++) {
+            document.write('<li> text</li>')
+        }
+        document.write('</ul>')
+        console.log();
+    }
+    createUlWithLi();
+    //створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+    function createUlWithLi(text){
+
+        document.write('<ul>')
+        document.write('<li> text</li>')
+        document.write('<li> text</li>')
+        document.write('<li> text</li>')
+        document.write('</ul>')
+        console.log('text');
+    }
+    createUlWithLi('text');
+   // створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+
+    function createUlWithLi(text, numberOfItems){
+
+        document.write('<ul>')
+        for (let i = 0; i < numberOfItems; i++) {
+            document.write('<li> thanks</li>')
+        }
+        document.write('</ul>')
+console.log('thanks');
+    }
+    createUlWithLi('text', 3);
+
+    //створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
+function createListOfArray (elementsArray) {
+    document.write ('<ul>')
+    for (let i = 0; i < elementsArray.length; i ++) {
+        document.write('<li>3, string, false</li>')
+    }
+    document.write('</ul>')
+    console.log ();
+}
+    createListOfArray([3, 'string', false]);
+
+   // створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+function displayObjects (objectsArray) {
+   for (const obj of objectsArray) {
+       document.write('<div>');
+       document.write (`<p>ID:${obj.id}</p>`);
+       document.write (`<p>Name:${obj.name}</p>`);
+       document.write (`<p>Age:${obj.age}</p>`);
+       document.write('</div>');
+
+   }
+}
+    const people = [
+        { id: 1, name: 'Vika', age: 20 },
+        { id: 2, name: 'Masha', age: 32 },
+        { id: 3, name: 'Vlada', age: 8 }
+    ];
+displayObjects(people);
+
+</script>
+
+
+
+</body>
+</html>
