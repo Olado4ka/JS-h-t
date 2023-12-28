@@ -113,17 +113,24 @@ console.log(Edarr);
     //    value: '', // '6'-'10', 'ace','jack','queen','king','joker'
     //color:'', // 'red','black'
 //}
-let cards = [
+function createDeck () {
 
-    { cardSuit: ['spade', 'diamond','heart', 'clubs']},
-    {value:  ['6','7', '8', '9', '10', 'ace','jack','queen','king']},
-    { color:[ "red",'black']}
 
-];
-for (let element of cards) {
+    const cardSuits =['spade', 'diamond','heart', 'clubs'];
+   const values =  ['6','7', '8', '9', '10', 'ace','jack','queen','king'];
+   const colors = [ "red",'black'];
+    const deck = [];
+    for (const cardSuit of cardSuits) {
+        for (const value of values) {
+            for (const color of colors) {
+                deck.push (`${cardSuit}, ${value}, ${color}`)
+            }
+        }
 
+    }
+    return deck
 }
-
+console.log(createDeck())
 
 
 
